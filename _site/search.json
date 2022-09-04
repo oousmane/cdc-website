@@ -1,14 +1,56 @@
 [
   {
+    "objectID": "nous-connaitre.html",
+    "href": "nous-connaitre.html",
+    "title": "About",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "articles/kmeans.html",
+    "href": "articles/kmeans.html",
+    "title": "Implémenter Kmeans avec R",
+    "section": "",
+    "text": "Le partitionnement (clustering) est une méthode d’apprentissage non supervisée qui vise à rassembler les observations similaires d’un jeu de données en des sous-groupes bien distincts les uns des autres.  Cela est particulièrement utile pour le ciblage de clients, la définition de nouveau kit ou pack produit.  Une méthode de clustering des plus utilisées est le kmeans (K-moyennes) qui vise à créer k groupes à partir de votre jeu de données.  L’algorithme est assez simple et intuitif, je vous laisse une vidéo ici.\nDans ce tutoriel, nous allons apprendre comment implémenter la méthode des kmeans sur un jeu données notamment palmerpenguins. Si vous le souhaitez une copie pdf de ce tutoriel est disponible ici"
+  },
+  {
+    "objectID": "articles/kmeans.html#nombre-de-clusters-prédéfinis",
+    "href": "articles/kmeans.html#nombre-de-clusters-prédéfinis",
+    "title": "Implémenter Kmeans avec R",
+    "section": "4.1 Nombre de clusters prédéfinis",
+    "text": "4.1 Nombre de clusters prédéfinis\nComme il faut bien fournir un nombre de cluster, partons sur la base que pour des besoins pratiques nous voulons regroupé nos penguins en trois groupes plutôt homogène sur la base des quatre variables. La sélection des centres de classes se faisant de façon aléatoires, pour garantir la reproductibilité des analyses, nous devons fixé les résultats qui seront fournis par le RNG (random number generator) à travers la fonction set.seed()\n\nset.seed(seed = 1234)\nkm_res <- kmeans(penguins_num, centers = 3, iter.max = 20, nstart = 10)\n\nVoilà ! Eh oui vous avez ainsi réaliser un kmeans avec R. Pour avoir une idée des resultats :\n\nglimpse(km_res)\n\nList of 9\n $ cluster     : int [1:342] 2 2 2 2 2 2 2 2 1 2 ...\n $ centers     : num [1:3, 1:4] 0.66 -1.047 0.656 0.816 0.486 ...\n  ..- attr(*, \"dimnames\")=List of 2\n  .. ..$ : chr [1:3] \"1\" \"2\" \"3\"\n  .. ..$ : chr [1:4] \"bill_length_mm\" \"bill_depth_mm\" \"flipper_length_mm\" \"body_mass_g\"\n $ totss       : num 1364\n $ withinss    : num [1:3] 113 122 143\n $ tot.withinss: num 378\n $ betweenss   : num 986\n $ size        : int [1:3] 87 132 123\n $ iter        : int 3\n $ ifault      : int 0\n - attr(*, \"class\")= chr \"kmeans\"\n\n\n\nkm_res$cluster donne le numéro de cluster de chaque ligne (1,2 ou 3 selon)\nkm_res$centers donne les coordonnées du centre de chaque cluster.\nkm_res$size donne le nombre d’individu par groupe\nkm_res$totss donne la variance totale du jeu de données\nkm_res$tot.withinss donne la variance totale intra-groupe\nkm_res$betweenss donne la variance totale inter-groupes\n\nNous utiliserons le package broom, pour extraire ces informations utiles de l’objet km_res.\n\nlibrary(broom)\n# extraire les informations de chaque cluster\ntidy(km_res)\n\n# A tibble: 3 × 7\n  bill_length_mm bill_depth_mm flipper_length_mm body_ma…¹  size withi…² cluster\n           <dbl>         <dbl>             <dbl>     <dbl> <int>   <dbl> <fct>  \n1          0.660         0.816            -0.286    -0.374    87    113. 1      \n2         -1.05          0.486            -0.890    -0.769   132    122. 2      \n3          0.656        -1.10              1.16      1.09    123    143. 3      \n# … with abbreviated variable names ¹​body_mass_g, ²​withinss\n\n\n\n# les informations sur les variances\nglance(km_res)\n\n# A tibble: 1 × 4\n  totss tot.withinss betweenss  iter\n  <dbl>        <dbl>     <dbl> <int>\n1  1364         378.      986.     3\n\n\nNous avons choisi 20 itérations pour le choix des centres. Le meilleur partitionnement est obtenu au numéro iter.\nAussi il est particulièrement utile de joindre au jeu de données penguins_num une variable .cluster qui va identifier à quel cluster appartient une observation donnée.\n\npenguins_clustered <- penguins %>% \n  select(-year) %>% \n  select_if(is.numeric) %>% \n  drop_na() %>% \n  augment(km_res, .) %>% \n  left_join(penguins,.) %>% \n  drop_na()\n\nglimpse(penguins_clustered)\n\nRows: 333\nColumns: 9\n$ species           <fct> Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            <fct> Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    <dbl> 39.1, 39.5, 40.3, 36.7, 39.3, 38.9, 39.2, 41.1, 38.6…\n$ bill_depth_mm     <dbl> 18.7, 17.4, 18.0, 19.3, 20.6, 17.8, 19.6, 17.6, 21.2…\n$ flipper_length_mm <int> 181, 186, 195, 193, 190, 181, 195, 182, 191, 198, 18…\n$ body_mass_g       <int> 3750, 3800, 3250, 3450, 3650, 3625, 4675, 3200, 3800…\n$ sex               <fct> male, female, female, female, male, female, male, fe…\n$ year              <int> 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…\n$ .cluster          <fct> 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1, 2, 2, 2…"
+  },
+  {
+    "objectID": "articles/kmeans.html#estimation-du-nombre-optimal-de-cluster",
+    "href": "articles/kmeans.html#estimation-du-nombre-optimal-de-cluster",
+    "title": "Implémenter Kmeans avec R",
+    "section": "4.2 Estimation du nombre optimal de cluster",
+    "text": "4.2 Estimation du nombre optimal de cluster\nComme annoncé plus tôt, comment s’assurer du bon choix de k pour garantir le meilleur clustering possible de notre jeu de données ?\nPlusieurs approches existent, mais la plus simple consiste à réaliser le kmeans avec des valeurs différentes de k afin de voir comment évolue la variance intra-groupe. En abcisse on aura le nombre de clusters et en ordonnées la variance intra-groupe. Le nombre optimale de cluster se situe la ou se trouve le coude. Vous l’aurez compris c’est une méthode visuelle : la méthode du coude (elbow). La fonction fviz_nbclust() du package factoextra permet celà.\n\nset.seed(seed = 1234)\nfviz_nbclust(x = penguins_num,FUNcluster = kmeans,method = \"wss\",k.max = 15)\n\n\n\n\nOn dira que celà est subjectif, mais le nombre optimal de groupe dans ce cas semble être k = 3 .\n\nset.seed(seed = 1234)\nfviz_nbclust(x = penguins_num,FUNcluster = kmeans,method = \"wss\",k.max = 15)+\n  geom_vline(xintercept = 3, linetype = \"dashed\",\n             color =\"red\")\n\n\n\n\nD’autres méthodes comme “silhouette” ou “gap_statistic sont implémentés pour estimer le nombre optimal de cluster k. Pour en savoir plus sur ces méthodes et bien d’autres consulter cet excellent article.\nLa méthode “silhouette” nous suggère deux clusters.\n\nfviz_nbclust(x = penguins_num,FUNcluster = kmeans,method = \"silhouette\",k.max = 15)\n\n\n\n\nLa méthode “gap_stat” nous suggère plutôt quatre groupes !\n\nfviz_nbclust(x = penguins_num,FUNcluster = kmeans,method = \"gap_stat\",k.max = 15)\n\n\n\n\nDe toute les façons ce sont des indications pour le clustering. On pourra par aggression visuelle s’assurer de la bonne partition des données. Nous allons donc entamer un nouveau point à savoir la visualisation des clusters."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Cercle Des Chercheurs - CDC",
+    "title": "Accueil",
     "section": "",
-    "text": "To learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "L’Association des Blogueurs du Burkina est une structure citoyenne de promotion de la pratique du blogging.\nElle participe au partage du savoir et d’initiatives innovantes dans le domaine des TIC, la communication, la promotion de l’éducation citoyenne responsable, la science et la culture."
+  },
+  {
+    "objectID": "index.html#nos-articles",
+    "href": "index.html#nos-articles",
+    "title": "Accueil",
+    "section": "Nos Articles",
+    "text": "Nos Articles"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "contacts.html",
+    "href": "contacts.html",
     "title": "About",
     "section": "",
     "text": "1 + 1\n\n[1] 2"

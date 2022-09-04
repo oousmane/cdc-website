@@ -1,0 +1,273 @@
+---
+title: "Implémenter Kmeans avec R"
+author: "Ousmane Ouedraogo"
+execute: 
+  warning: false
+  message: false
+format: html
+toc: true
+number-sections: true
+toc-title: "Contenu"
+toc-depth: 3
+editor: visual
+---
+
+# Introduction
+
+Le partitionnement (clustering) est une méthode d'apprentissage non supervisée qui vise à rassembler les observations similaires d'un jeu de données en des sous-groupes bien distincts les uns des autres. 
+Cela est particulièrement utile pour le ciblage de clients, la définition de nouveau kit ou pack produit. 
+Une méthode de clustering des plus utilisées est le kmeans (K-moyennes) qui vise à créer k groupes à partir de votre jeu de données. 
+L'algorithme est assez simple et intuitif, je vous laisse une vidéo ici.
+
+Dans ce tutoriel, nous allons apprendre comment implémenter la méthode des kmeans sur un jeu données notamment palmerpenguins.
+Si vous le souhaitez une copie pdf de ce tutoriel est disponible [ici](https://drive.google.com/file/d/1-aqo5VaWNJADgb1jL6zUiCH7mTjOBOo4/view?usp=sharing)
+
+# Librairies utiles
+
+L'algorithme des kmeans, est disponible dans le R de base via la fonction `kmeans()` .
+Nous aurons besoin du package `tidyverse` pour la manipulation des données et de `palmerpenguins` pour le jeu de données.
+
+```{r}
+#|warning: false
+#|message: false
+library(factoextra)
+library(tidyverse)
+library(tidylog)
+library(palmerpenguins)
+```
+
+# Préparation des données
+
+La méthode des kmeans requiert uniquement des données numériques et ne tolère pas de données manquantes.
+En effet la similarité entre les observations est en fait une mesure de distance (par exemple euclidienne) entre elles.
+Plus la distance entre deux observations est petite, plus ces dernières sont similaires.
+Alors jetons regardons de près notre jeu de données
+
+```{r}
+penguins %>% 
+  glimpse()
+```
+
+Le jeu de données `penguin`s est constitué de 344 observations et 8 variables dont trois catégorielles et 5 numériques.
+La variable année bien que numérique n'est pas pertinente pour l'analyse.
+Nous les enlèverons pour la suite, pour cela nous utiliserons la fonction `select_if()` de `dplyr` .
+Les données manquantes seront supprimés dans notre cas avec la fonction `drop_na()`
+
+```{r}
+#|label: 'selection-numérique'
+#|message: true
+penguins_num <- penguins %>% 
+  select(-year) %>% 
+  select_if(is.numeric) %>% 
+  drop_na()
+
+glimpse(penguins_num)
+
+```
+
+Voilà qui est fait, notre je de données est réduit à présent à quatres variables et 342 observations.
+
+Lorsque les données sont exprimées dans des unités différentes comme ici grammes et millimètres, les variables ne sont pas intercomparables.
+Pour résoudre cela, les données sont parfois centrées et réduites.
+Nous pouvons faire cela avec la fonction `scale().`
+
+```{r}
+penguins_num <- penguins_num %>%
+  scale() %>% 
+  as_tibble()
+glimpse(penguins_num)
+```
+
+Les données sont désormais sans unités, sur la même échelle et sont donc intercomparables.
+
+# Implémentation du kmeans
+
+Maintenant nous allons implémenter la méthode du kmeans qui exige un nombre de cluster (groupe) .
+Bien entendu cela suppose que l'on a déja une idée du nombre de cluster que l'on souhaite avoir.
+Nous verrons par la suite qu'il existe des techniques basées sur la variance intra et inter-groupes qui nous permettrons d'avoir une idée du nombre optimal de cluster suivant la structure de nos données.
+Ce nombre tendra a minimisé la variance intra-groupe et à maximiser la variance inter-groupe.
+Voyons donc de près comment tout ça marche.
+
+La fonction `kmeans()` est relativement simple à utiliser et voici les arguments à fournir au minimum.
+
+```{r}
+#| eval: false
+kmeans(x, centers = 3, iter.max = 20, nstart = 10)
+
+```
+
+::: callout-note
+-   x : matrice numérique, dataframe ou tibble numérique ou simplement un vecteur numérique.
+
+-   centers : le nombre de clusters (k), alors un ensemble aléatoire de lignes (distinctes) dans x est choisi comme centres initiaux.
+
+-   iter.max : nombre maximal d'itérations autorisées.
+    La valeur par défaut est 10.
+
+-   nstart : le nombre de partitions de départ aléatoires.
+    Choisir nstart \> 1 est recommandé.
+:::
+
+Les autres arguments supposent des analyses poussées qui ne sont pas abordées dans cet tutoriel introductif.
+vous aurez à la fin une liste de documents à consulter pour approfondir le sujet.
+
+## Nombre de clusters prédéfinis
+
+Comme il faut bien fournir un nombre de cluster, partons sur la base que pour des besoins pratiques nous voulons regroupé nos penguins en trois groupes plutôt homogène sur la base des quatre variables.
+La sélection des centres de classes se faisant de façon aléatoires, pour garantir la reproductibilité des analyses, nous devons fixé les résultats qui seront fournis par le RNG (random number generator) à travers la fonction `set.seed()`
+
+```{r}
+set.seed(seed = 1234)
+km_res <- kmeans(penguins_num, centers = 3, iter.max = 20, nstart = 10)
+```
+
+Voilà !
+Eh oui vous avez ainsi réaliser un kmeans avec R.
+Pour avoir une idée des resultats :
+
+```{r}
+glimpse(km_res)
+```
+
+-   `km_res$cluster` donne le numéro de cluster de chaque ligne (1,2 ou 3 selon)
+
+-   `km_res$centers` donne les coordonnées du centre de chaque cluster.
+
+-   `km_res$size` donne le nombre d'individu par groupe
+
+-   `km_res$totss` donne la variance totale du jeu de données
+
+-   `km_res$tot.withinss` donne la variance totale intra-groupe
+
+-   `km_res$betweenss` donne la variance totale inter-groupes
+
+Nous utiliserons le package `broom`, pour extraire ces informations utiles de l'objet `km_res`.
+
+```{r}
+library(broom)
+# extraire les informations de chaque cluster
+tidy(km_res)
+```
+
+```{r}
+# les informations sur les variances
+glance(km_res)
+```
+
+Nous avons choisi 20 itérations pour le choix des centres.
+Le meilleur partitionnement est obtenu au numéro iter.
+
+Aussi il est particulièrement utile de joindre au jeu de données `penguins_num` une variable `.cluster` qui va identifier à quel cluster appartient une observation donnée.
+
+```{r}
+penguins_clustered <- penguins %>% 
+  select(-year) %>% 
+  select_if(is.numeric) %>% 
+  drop_na() %>% 
+  augment(km_res, .) %>% 
+  left_join(penguins,.) %>% 
+  drop_na()
+
+glimpse(penguins_clustered)
+```
+
+## Estimation du nombre optimal de cluster
+
+Comme annoncé plus tôt, comment s'assurer du bon choix de k pour garantir le meilleur clustering possible de notre jeu de données ?
+
+Plusieurs approches existent, mais la plus simple consiste à réaliser le kmeans avec des valeurs différentes de k afin de voir comment évolue la variance intra-groupe.
+En abcisse on aura le nombre de clusters et en ordonnées la variance intra-groupe.
+Le nombre optimale de cluster se situe la ou se trouve le coude.
+Vous l'aurez compris c'est une méthode visuelle : la méthode du coude (elbow).
+La fonction `fviz_nbclust()` du package `factoextra` permet celà.
+
+```{r}
+set.seed(seed = 1234)
+fviz_nbclust(x = penguins_num,FUNcluster = kmeans,method = "wss",k.max = 15)
+```
+
+On dira que celà est subjectif, mais le nombre optimal de groupe dans ce cas semble être `k = 3` .
+
+```{r}
+set.seed(seed = 1234)
+fviz_nbclust(x = penguins_num,FUNcluster = kmeans,method = "wss",k.max = 15)+
+  geom_vline(xintercept = 3, linetype = "dashed",
+             color ="red")
+```
+
+D'autres méthodes comme "silhouette" ou "gap_statistic sont implémentés pour estimer le nombre optimal de cluster k. Pour en savoir plus sur ces méthodes et bien d'autres consulter cet excellent [article](https://towardsdatascience.com/10-tips-for-choosing-the-optimal-number-of-clusters-277e93d72d92).
+
+La méthode "silhouette" nous suggère deux clusters.
+
+```{r}
+fviz_nbclust(x = penguins_num,FUNcluster = kmeans,method = "silhouette",k.max = 15)
+```
+
+La méthode "gap_stat" nous suggère plutôt quatre groupes !
+
+```{r}
+fviz_nbclust(x = penguins_num,FUNcluster = kmeans,method = "gap_stat",k.max = 15)
+```
+
+De toute les façons ce sont des indications pour le clustering.
+On pourra par aggression visuelle s'assurer de la bonne partition des données.
+Nous allons donc entamer un nouveau point à savoir la visualisation des clusters.
+
+# Visualisation des clusters
+
+Jusque là, nous avons manipuler le résultat de notre clustering de façon numérique.
+Il serait bon de visualiser le résultat.
+A cet effet, la fonction fviz_cluster() du package factoextra nous permet de visualiser les données avec le moins de code possible.
+
+```{r}
+set.seed(seed = 1234)
+km_res <- kmeans(penguins_num, centers = 3, iter.max = 20, nstart = 10)
+# visualisation
+fviz_cluster(object = km_res,data = penguins_num)+
+  theme_light()
+```
+
+Avec `k = 3` clusters, visiblement les données ne sont pas bien regroupées.
+
+```{r}
+set.seed(seed = 1234)
+km_res <- kmeans(penguins_num, centers = 4, iter.max = 20, nstart = 10)
+# visualisation
+fviz_cluster(object = km_res,data = penguins_num)+
+  theme_light()
+```
+
+Par agression visuelle aussi, les données semblent ne pas être bien partitionnées.
+Les graphiques laissent voir en réalités deux clusters comme nous le proposait la méthode "silhouette".
+Vous l'aurez compris, il ne s'agit pas juste d'exécuter du code et de prendre les résultats pour de l'argent comptant.
+
+```{r}
+set.seed(seed = 1234)
+km_res <- kmeans(penguins_num, centers = 2, iter.max = 20, nstart = 10)
+# visualisation
+fviz_cluster(object = km_res,data = penguins_num)+
+  theme_light()
+```
+
+Voilà qui est assez interréssant.
+Les données se regroupent en mieux en deux clusters.
+
+# Conclusion
+
+Nous voilà à la fin de ce court tutoriel pour vous introduire au clustering avec R.
+Les notions couvertent ici sont loin de faire le tour de l'état d'art sur la question.
+Pour approfondir le sujet je vous recommande les contenus ci après :
+
+[The complete guide to clustering analysis: k-means and hierarchical clustering by hand and in R](https://statsandr.com/blog/clustering-analysis-k-means-and-hierarchical-clustering-by-hand-and-in-r/) de Antoine Soetewey , c'est de loin à mon avis la ressource la plus complète sur le sujet.
+
+[Articles - Cluster Analysis in R: Practical Guide](http://www.sthda.com/english/articles/25-clusteranalysis-in-r-practical-guide/) de Abdoukalel Kassambara
+
+[K-means Cluster Analysis](https://uc-r.github.io/kmeans_clustering) de Bradley Boehmke
+
+# Reférences
+
+```{r}
+#| echo: false
+#| output: asis
+report::report_packages()
+```

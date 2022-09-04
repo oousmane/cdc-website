@@ -4,14 +4,17 @@ project:
 website:
   title: "CDC"
   navbar:
-    left:
+    right:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: ACCUEIL
+      - href: nous-connaitre.qmd
+        text: CDC
+      - href: contacts.qmd
+        text: CONTACTS
 
 format:
   html:
-    theme: cosmo
+    theme: "yeti"
     css: styles.css
     toc: true
 
