@@ -5,7 +5,10 @@ project:
 website:
   title: "CDC"
   navbar:
-    right:
+    background: primary
+    search: true
+    logo: logo-cdc.png
+    left:
       - href: index.qmd
         text: ACCUEIL
       - href: nous-connaitre.qmd

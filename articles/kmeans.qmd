@@ -5,6 +5,7 @@ execute:
   warning: false
   message: false
 format: html
+image: "kmeans-preview.png"
 toc: true
 number-sections: true
 toc-title: "Contenu"
