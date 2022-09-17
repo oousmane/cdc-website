@@ -12,6 +12,10 @@ website:
         text: CDC
       - href: contacts.qmd
         text: CONTACTS
+      - href: inscription.qmd
+        text: INSCRIPTION
+
+      
 
 format:
   html:
