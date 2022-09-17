@@ -17,9 +17,13 @@ website:
         text: CONTACTS
       - href: inscription.qmd
         text: INSCRIPTION
-
-      
-
+    right: 
+      - icon: facebook
+        href: https://www.facebook.com/cerclechercheurs
+        aria-label: Quarto Facebook
+      - icon: linkedin
+        href: https://www.linkedin.com/in/association-cercle-des-chercheurs-25b5aa237/
+        aria-label: Quarto Linkedin
 format:
   html:
     theme: "sandstone"
