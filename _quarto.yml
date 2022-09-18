@@ -24,11 +24,17 @@ website:
       - icon: linkedin
         href: https://www.linkedin.com/in/association-cercle-des-chercheurs-25b5aa237/
         aria-label: Quarto Linkedin
+  page-footer:
+   left: Copyright © 2022 Cercle Des Chercheurs, Association.
+   right: 
+    - icon: github
+      href: https://github.com/oousmane/cdc-website
+      aria-label: Quarto Github
 format:
   html:
     theme: "sandstone"
     css: styles.css
     toc: true
-
+license: CC BY-NC
 editor: visual
 
