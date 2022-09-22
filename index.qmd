@@ -1,16 +1,13 @@
 ---
 title: "Accueil"
 lang: fr
+description: |
+ Le Cercle des Chercheurs CDC, est une association à caractère scientifique visant à promouvoir la recherche scientifique dans toute sa diversité.
+ Specifiquement le CDC contribue à valoriser, vulgariser les résultats de recherches au niveau national et participe à la formation des jeunes et chercheurs confirmés sur un certain nombre d'outils.
 listing:
   contents: articles
   type: grid
   sort: "date"
 ---
-
-## L'association
-
-L'Association des Blogueurs du Burkina est une structure citoyenne de promotion de la pratique du blogging.
-
-Elle participe au partage du savoir et d'initiatives innovantes dans le domaine des TIC, la communication, la promotion de l'éducation citoyenne responsable, la science et la culture.
 
 ## Nos Articles

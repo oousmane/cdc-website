@@ -1,6 +1,7 @@
 project:
   type: website
   output-dir: docs
+lang: fr
 
 website:
   title: "CDC"
@@ -11,10 +12,14 @@ website:
     left:
       - href: index.qmd
         text: ACCUEIL
-      - href: nous-connaitre.qmd
-        text: CDC
-      - href: contacts.qmd
-        text: CONTACTS
+      - text: "CDC"
+        menu: 
+          - text: Nos activités
+            href: nous-connaitre.qmd
+          - text: Nos textes
+            href: about.qmd
+          - text: Nous contacter
+            href: contacts.qmd
       - href: inscription.qmd
         text: INSCRIPTION
     right: 
@@ -30,6 +35,7 @@ website:
     - icon: github
       href: https://github.com/oousmane/cdc-website
       aria-label: Quarto Github
+page-progression-direction: ltr
 format:
   html:
     theme: "sandstone"
