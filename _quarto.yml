@@ -20,7 +20,7 @@ website:
         menu: 
           - text: Présentation
             href: nous-connaitre.qmd
-          - text: Textes
+          - text: Partenaires
             href: about.qmd
           - text: Contacts
             href: contacts.qmd
