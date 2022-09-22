@@ -2,9 +2,13 @@ project:
   type: website
   output-dir: docs
 lang: fr
-
 website:
   title: "CDC"
+  repo-url: https://github.com/oousmane/cdc-website
+  cookie-consent: true
+  
+  description: le cercle des chercheurs
+  page-navigation: true
   navbar:
     background: primary
     search: true
@@ -14,14 +18,18 @@ website:
         text: ACCUEIL
       - text: "CDC"
         menu: 
-          - text: Nos activités
+          - text: Présentation
             href: nous-connaitre.qmd
-          - text: Nos textes
+          - text: Textes
             href: about.qmd
-          - text: Nous contacter
+          - text: Contacts
             href: contacts.qmd
       - href: inscription.qmd
-        text: INSCRIPTION
+        text: Adhésion
+      - href: about.qmd
+        text: Évènements à venir
+      - href: about.qmd
+        text: Publications
     right: 
       - icon: facebook
         href: https://www.facebook.com/cerclechercheurs
