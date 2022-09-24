@@ -14,10 +14,10 @@ about:
       text: E-mail
       href: mailto:sen.cdc@hotmail.com
     - icon: whatsapp
-      text: whatsapp
+      text: Whatsapp
       href: https://wa.link/rxb4o6
     - icon: phone-fill
-      text: téléphone
+      text: Téléphone
       href: tel:0022770857589
 ---
 

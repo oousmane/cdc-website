@@ -1,9 +1,5 @@
 ---
-title: "About"
+title: "Une Page"
 ---
 
-About this site
-
-```{r}
-1 + 1
-```
+## Oups ! page en construction
