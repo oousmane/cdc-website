@@ -1,6 +1,7 @@
 ---
 title: "Implémenter Kmeans avec R"
 author: "Ousmane Ouedraogo"
+description: Le partitionnement (clustering) est une méthode d’apprentissage non supervisée qui vise à rassembler les observations similaires d’un jeu de données en des sous-groupes bien distincts les uns des autres.
 execute: 
   warning: false
   message: false

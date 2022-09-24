@@ -1,10 +1,17 @@
 [
   {
+    "objectID": "presentation.html",
+    "href": "presentation.html",
+    "title": "Cercle Des Chercheurs - CDC",
+    "section": "",
+    "text": "Le Cercle des Chercheurs CDC, est une association à caractère scientifique visant à promouvoir la recherche scientifique dans toute sa diversité. Specifiquement le CDC contribue à valoriser, vulgariser les résultats de recherches au niveau national et participe à la formation des jeunes et chercheurs confirmés sur un certain nombre d’outils."
+  },
+  {
     "objectID": "nous-connaitre.html",
     "href": "nous-connaitre.html",
     "title": "About",
     "section": "",
-    "text": "1 + 1\n\n[1] 2\n\n\n\n\n\nRéutilisationhttps://creativecommons.org/licenses/by-nc/4.0/deed.fr"
+    "text": "1 + 1\n\n[1] 2"
   },
   {
     "objectID": "articles/kmeans.html",
@@ -32,21 +39,28 @@
     "href": "index.html",
     "title": "Accueil",
     "section": "",
-    "text": "Implémenter Kmeans avec R\n\n\n\n\n\n\nOusmane Ouedraogo\n\n\n\n\n\n\n\n\nAucun article correspondant\n\nRéutilisationhttps://creativecommons.org/licenses/by-nc/4.0/deed.fr"
+    "text": "Bienvenue sur le site web du Cercle Des Chercheurs, association à but non lucratif et à caractère scientifique."
+  },
+  {
+    "objectID": "index.html#nos-articles",
+    "href": "index.html#nos-articles",
+    "title": "Accueil",
+    "section": "Nos Articles",
+    "text": "Nos Articles"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "1 + 1\n\n[1] 2\n\n\n\n\n\nRéutilisationhttps://creativecommons.org/licenses/by-nc/4.0/deed.fr"
+    "text": "1 + 1\n\n[1] 2"
   },
   {
     "objectID": "contacts.html",
     "href": "contacts.html",
     "title": "About",
     "section": "",
-    "text": "1 + 1\n\n[1] 2\n\n\n\n\n\nRéutilisationhttps://creativecommons.org/licenses/by-nc/4.0/deed.fr"
+    "text": "1 + 1\n\n[1] 2"
   },
   {
     "objectID": "inscription.html",

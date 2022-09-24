@@ -3,10 +3,14 @@ project:
   output-dir: docs
 lang: fr
 website:
+ # margin-header: subscribe.html
   title: "CDC"
   repo-url: https://github.com/oousmane/cdc-website
   cookie-consent: true
-  
+  # comments: 
+  #  utterances: 
+  #    repo: oousmane/cdc-website
+  #    label: Commentaires
   description: le cercle des chercheurs
   page-navigation: true
   navbar:
@@ -19,11 +23,11 @@ website:
       - text: "CDC"
         menu: 
           - text: Présentation
-            href: nous-connaitre.qmd
+            href: presentation.qmd
           - text: Partenaires
             href: about.qmd
-          - text: Contacts
-            href: contacts.qmd
+          # - text: Contacts
+          #   href: contacts.qmd
       - href: inscription.qmd
         text: Adhésion
       - href: about.qmd
@@ -49,6 +53,6 @@ format:
     theme: "sandstone"
     css: styles.css
     toc: true
-license: CC BY-NC
+#license: CC BY-NC
 editor: visual
 
