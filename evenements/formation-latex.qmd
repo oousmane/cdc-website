@@ -6,6 +6,8 @@ image: "image/latex-poster.jpeg"
 editor: visual
 ---
 
+![](image/latex-project-logo.svg)
+
 ## Introduction
 
 LATEX se caractérise par la qualité typographique et la portabilité des documents générés ainsi que par sa capacité à gérer des documents de grande taille et pour la préparation de présentations.

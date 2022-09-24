@@ -159,5 +159,12 @@
     "title": "A venir",
     "section": "Nos calendriers",
     "text": "Nos calendriers"
+  },
+  {
+    "objectID": "evenements/formation-latex.html#introduction",
+    "href": "evenements/formation-latex.html#introduction",
+    "title": "Formation LATEX | Atelier pratique",
+    "section": "Introduction",
+    "text": "Introduction\nLATEX se caractérise par la qualité typographique et la portabilité des documents générés ainsi que par sa capacité à gérer des documents de grande taille et pour la préparation de présentations. Ceci en fait un outil très intéressant pour la rédaction d’un manuscrit de thèse. En revanche, sa prise en main demande un effort non-négligeable. C’est la raison de cette formation. LaTeX est particulièrement utilisé dans les domaines techniques et scientifiques pour la production de documents de taille moyenne (tels que des articles) ou importante (thèses ou livres, par exemple)"
   }
 ]
