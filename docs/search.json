@@ -7,6 +7,62 @@
     "text": "Le Cercle des Chercheurs CDC, est une association à caractère scientifique visant à promouvoir la recherche scientifique dans toute sa diversité. Specifiquement le CDC contribue à valoriser, vulgariser les résultats de recherches au niveau national et participe à la formation des jeunes et chercheurs confirmés sur un certain nombre d’outils."
   },
   {
+    "objectID": "evenements/formation-latex.html",
+    "href": "evenements/formation-latex.html",
+    "title": "Formation LATEX | Atelier pratique",
+    "section": "",
+    "text": "LATEX se caractérise par la qualité typographique et la portabilité des documents générés ainsi que par sa capacité à gérer des documents de grande taille et pour la préparation de présentations. Ceci en fait un outil très intéressant pour la rédaction d’un manuscrit de thèse. En revanche, sa prise en main demande un effort non-négligeable. C’est la raison de cette formation. LaTeX est particulièrement utilisé dans les domaines techniques et scientifiques pour la production de documents de taille moyenne (tels que des articles) ou importante (thèses ou livres, par exemple)"
+  },
+  {
+    "objectID": "evenements/formation-latex.html#pourquoi-apprendre-latex",
+    "href": "evenements/formation-latex.html#pourquoi-apprendre-latex",
+    "title": "Formation LATEX | Atelier pratique",
+    "section": "Pourquoi apprendre LaTex",
+    "text": "Pourquoi apprendre LaTex\nTrois gros avantage de Latex\n\nSéparation de la forme et du fond :Une fois le texte rédigé, la mise en forme est prise automatiquement en charge selon les instructions choisies et indiquées au moyen des commandes ou balises et si besoin vous pouvez aisément la modifier sans avoir à remanier le texte rédigé.\nFacilité d’intégration des formules mathématiques,\nOutil gratuit"
+  },
+  {
+    "objectID": "evenements/formation-latex.html#objectifs-pédagogiques",
+    "href": "evenements/formation-latex.html#objectifs-pédagogiques",
+    "title": "Formation LATEX | Atelier pratique",
+    "section": "Objectifs pédagogiques",
+    "text": "Objectifs pédagogiques\n\nSe familiariser avec LaTex\nConnaître toutes les structures à suivre et les bonnes pratiques pour réaliser la rédaction avec LaTex\nPouvoir rédiger des articles ou des thèses scientifiques de qualité avec LaTex"
+  },
+  {
+    "objectID": "evenements/formation-latex.html#prérequis",
+    "href": "evenements/formation-latex.html#prérequis",
+    "title": "Formation LATEX | Atelier pratique",
+    "section": "Prérequis",
+    "text": "Prérequis\nIl n’est pas demandé de connaître LaTex pour suivre cette formation.\n\nAvoir les notions de base du traitement de texte"
+  },
+  {
+    "objectID": "evenements/formation-latex.html#public-cible",
+    "href": "evenements/formation-latex.html#public-cible",
+    "title": "Formation LATEX | Atelier pratique",
+    "section": "Public cible",
+    "text": "Public cible\n\nDes chercheurs et des étudiants qui souhaitent rédiger des mémoires, des articles ou des thèses avec Latex\nDes auteurs des livres scientifiques qui veulent faire publier leurs œuvres par les grands éditeurs"
+  },
+  {
+    "objectID": "evenements/formation-latex.html#lieu-et-dates-et-frais",
+    "href": "evenements/formation-latex.html#lieu-et-dates-et-frais",
+    "title": "Formation LATEX | Atelier pratique",
+    "section": "Lieu et dates et frais",
+    "text": "Lieu et dates et frais\nLa formation se déroulera les 14 et 15 Octobre 2022 de 08 heures à 16 heures à l’UFR SEA sise à l’Université Joseph KI-ZERBO\nLes frais de participations sont fixés à cinq mille (5000) francs CFA."
+  },
+  {
+    "objectID": "evenements/formation-latex.html#inscription",
+    "href": "evenements/formation-latex.html#inscription",
+    "title": "Formation LATEX | Atelier pratique",
+    "section": "Inscription",
+    "text": "Inscription\nLe formulaire google d’inscription est disponible ici"
+  },
+  {
+    "objectID": "evenements/formation-latex.html#formateur",
+    "href": "evenements/formation-latex.html#formateur",
+    "title": "Formation LATEX | Atelier pratique",
+    "section": "Formateur",
+    "text": "Formateur\nLa formation sera assurée Adama OUEDRAOGO, PhD. Il est Enseignant-Chercheur, Expert en protection contre les Rayonnements non ionisants"
+  },
+  {
     "objectID": "articles/kmeans.html",
     "href": "articles/kmeans.html",
     "title": "Implémenter Kmeans avec R",
@@ -82,5 +138,26 @@
     "title": "Devenir membre du CDC",
     "section": "Inscription",
     "text": "Inscription\nLes demandes d’adhésion peuvent être formuler en ligne depuis ce formulaire google.\nTélécharger le communiqué ici"
+  },
+  {
+    "objectID": "evenements.html",
+    "href": "evenements.html",
+    "title": "A venir",
+    "section": "",
+    "text": "Dans cette section, les évènements prévus du CDC : formations, conférences, colloques et autres assises."
+  },
+  {
+    "objectID": "evenements.html#les-évènements-à-venir",
+    "href": "evenements.html#les-évènements-à-venir",
+    "title": "A venir",
+    "section": "Les évènements à venir",
+    "text": "Les évènements à venir"
+  },
+  {
+    "objectID": "evenements.html#nos-calendriers",
+    "href": "evenements.html#nos-calendriers",
+    "title": "A venir",
+    "section": "Nos calendriers",
+    "text": "Nos calendriers"
   }
 ]

@@ -1,0 +1,11 @@
+---
+title: "A venir"
+lang: fr
+listing: 
+ contents: evenements
+ sort: "date"
+---
+
+Dans cette section, les évènements prévus du CDC : formations, conférences, colloques et autres assises.
+
+## Nos calendriers

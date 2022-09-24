@@ -30,7 +30,7 @@ website:
           #   href: contacts.qmd
       - href: inscription.qmd
         text: Adhésion
-      - href: about.qmd
+      - href: evenements.qmd
         text: Évènements à venir
       - href: about.qmd
         text: Publications

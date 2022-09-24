@@ -4,5 +4,11 @@
     "items": [
       "/articles/kmeans.html"
     ]
+  },
+  {
+    "listing": "/evenements.html",
+    "items": [
+      "/evenements/formation-latex.html"
+    ]
   }
 ]
