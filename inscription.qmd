@@ -1,13 +1,10 @@
 ---
 title: "Devenir membre du CDC"
-description: |
+title-block-banner: true
+description: "Cercle Des Chercheurs (C.D.C) est une association créée le 13 Octobre 2021 par récépissé N°000001270401 du 02 Février 2022. Afin de permettre un meilleur renforcement du CDC, Le secrétariat exécutif national (SEN) lance une campagne d'adhésion des personnes physiques au CDC."
 lang: fr
 date: "2022-04-06"
 ---
-
-L'Association Cercle Des Chercheurs (C.D.C) crée le 13 Octobre 2021 et reconnu par l'Etat par récépissé N000001270401 du 02 Février 2022.
-
-Afin de permettre un meilleur renforcement du CDC, Le secrétariat exécutif national (SEN) lance une campagne d'adhésion des personnes physiques au CDC.
 
 ## Critères d'adhésion
 

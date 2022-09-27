@@ -24,16 +24,16 @@ website:
         menu: 
           - text: Présentation
             href: presentation.qmd
-          - text: Partenaires
-            href: about.qmd
+          - text: Adhésion
+            href: inscription.qmd
           # - text: Contacts
           #   href: contacts.qmd
-      - href: inscription.qmd
-        text: Adhésion
+      # - href: inscription.qmd
+      #   text: Adhésion
       - href: evenements.qmd
         text: Évènements à venir
-      - href: about.qmd
-        text: Publications
+      # - href: about.qmd
+      #   text: Publications
     right: 
       - icon: facebook
         href: https://www.facebook.com/cerclechercheurs

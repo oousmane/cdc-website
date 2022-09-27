@@ -1,11 +1,14 @@
 ---
 title: "A venir"
+description: "Dans cette section, les évènements prévus du CDC : formations, conférences, colloques et autres assises."
+title-block-banner: true
 lang: fr
 listing: 
  contents: evenements
+ filter-ui: true
+ sort-ui: true
+ type: default
  sort: "date"
 ---
-
-Dans cette section, les évènements prévus du CDC : formations, conférences, colloques et autres assises.
 
 ## Nos calendriers

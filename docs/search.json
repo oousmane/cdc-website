@@ -7,58 +7,58 @@
     "text": "Le Cercle des Chercheurs CDC, est une association à caractère scientifique visant à promouvoir la recherche scientifique dans toute sa diversité. Specifiquement le CDC contribue à valoriser, vulgariser les résultats de recherches au niveau national et participe à la formation des jeunes et chercheurs confirmés sur un certain nombre d’outils."
   },
   {
-    "objectID": "evenements/formation-latex.html",
-    "href": "evenements/formation-latex.html",
-    "title": "Formation LATEX | Atelier pratique",
-    "section": "",
-    "text": "LATEX se caractérise par la qualité typographique et la portabilité des documents générés ainsi que par sa capacité à gérer des documents de grande taille et pour la préparation de présentations. Ceci en fait un outil très intéressant pour la rédaction d’un manuscrit de thèse. En revanche, sa prise en main demande un effort non-négligeable. C’est la raison de cette formation. LaTeX est particulièrement utilisé dans les domaines techniques et scientifiques pour la production de documents de taille moyenne (tels que des articles) ou importante (thèses ou livres, par exemple)"
+    "objectID": "evenements/formation-latex.html#introduction",
+    "href": "evenements/formation-latex.html#introduction",
+    "title": "Formation \\(\\LaTeX\\) | Atelier pratique",
+    "section": "Introduction",
+    "text": "Introduction\n\\(\\LaTeX\\) se caractérise par la qualité typographique et la portabilité des documents générés ainsi que par sa capacité à gérer des documents de grande taille et pour la préparation de présentations. Ceci en fait un outil très intéressant pour la rédaction d’un manuscrit de thèse. En revanche, sa prise en main demande un effort non-négligeable. C’est la raison de cette formation. \\(\\LaTeX\\) est particulièrement utilisé dans les domaines techniques et scientifiques pour la production de documents de taille moyenne (tels que des articles) ou importante (thèses ou livres, par exemple)"
   },
   {
     "objectID": "evenements/formation-latex.html#pourquoi-apprendre-latex",
     "href": "evenements/formation-latex.html#pourquoi-apprendre-latex",
-    "title": "Formation LATEX | Atelier pratique",
-    "section": "Pourquoi apprendre LaTex",
-    "text": "Pourquoi apprendre LaTex\nTrois gros avantage de Latex\n\nSéparation de la forme et du fond :Une fois le texte rédigé, la mise en forme est prise automatiquement en charge selon les instructions choisies et indiquées au moyen des commandes ou balises et si besoin vous pouvez aisément la modifier sans avoir à remanier le texte rédigé.\nFacilité d’intégration des formules mathématiques,\nOutil gratuit"
+    "title": "Formation \\(\\LaTeX\\) | Atelier pratique",
+    "section": "Pourquoi apprendre \\(\\LaTeX\\)",
+    "text": "Pourquoi apprendre \\(\\LaTeX\\)\nTrois gros avantage de \\(\\LaTeX\\)\n\nSéparation de la forme et du fond :Une fois le texte rédigé, la mise en forme est prise automatiquement en charge selon les instructions choisies et indiquées au moyen des commandes ou balises et si besoin vous pouvez aisément la modifier sans avoir à remanier le texte rédigé.\nFacilité d’intégration des formules mathématiques,\nOutil gratuit"
   },
   {
     "objectID": "evenements/formation-latex.html#objectifs-pédagogiques",
     "href": "evenements/formation-latex.html#objectifs-pédagogiques",
-    "title": "Formation LATEX | Atelier pratique",
+    "title": "Formation \\(\\LaTeX\\) | Atelier pratique",
     "section": "Objectifs pédagogiques",
-    "text": "Objectifs pédagogiques\n\nSe familiariser avec LaTex\nConnaître toutes les structures à suivre et les bonnes pratiques pour réaliser la rédaction avec LaTex\nPouvoir rédiger des articles ou des thèses scientifiques de qualité avec LaTex"
+    "text": "Objectifs pédagogiques\n\nSe familiariser avec \\(\\LaTeX\\)\nConnaître toutes les structures à suivre et les bonnes pratiques pour réaliser la rédaction avec \\(\\LaTeX\\)\nPouvoir rédiger des articles ou des thèses scientifiques de qualité avec \\(\\LaTeX\\)"
   },
   {
     "objectID": "evenements/formation-latex.html#prérequis",
     "href": "evenements/formation-latex.html#prérequis",
-    "title": "Formation LATEX | Atelier pratique",
+    "title": "Formation \\(\\LaTeX\\) | Atelier pratique",
     "section": "Prérequis",
-    "text": "Prérequis\nIl n’est pas demandé de connaître LaTex pour suivre cette formation.\n\nAvoir les notions de base du traitement de texte"
+    "text": "Prérequis\nIl n’est pas demandé de connaître \\(\\LaTeX\\) pour suivre cette formation.\n\nAvoir les notions de base du traitement de texte"
   },
   {
     "objectID": "evenements/formation-latex.html#public-cible",
     "href": "evenements/formation-latex.html#public-cible",
-    "title": "Formation LATEX | Atelier pratique",
+    "title": "Formation \\(\\LaTeX\\) | Atelier pratique",
     "section": "Public cible",
-    "text": "Public cible\n\nDes chercheurs et des étudiants qui souhaitent rédiger des mémoires, des articles ou des thèses avec Latex\nDes auteurs des livres scientifiques qui veulent faire publier leurs œuvres par les grands éditeurs"
+    "text": "Public cible\n\nDes chercheurs et des étudiants qui souhaitent rédiger des mémoires, des articles ou des thèses avec \\(\\LaTeX\\)\nDes auteurs des livres scientifiques qui veulent faire publier leurs œuvres par les grands éditeurs"
   },
   {
     "objectID": "evenements/formation-latex.html#lieu-et-dates-et-frais",
     "href": "evenements/formation-latex.html#lieu-et-dates-et-frais",
-    "title": "Formation LATEX | Atelier pratique",
+    "title": "Formation \\(\\LaTeX\\) | Atelier pratique",
     "section": "Lieu et dates et frais",
     "text": "Lieu et dates et frais\nLa formation se déroulera les 14 et 15 Octobre 2022 de 08 heures à 16 heures à l’UFR SEA sise à l’Université Joseph KI-ZERBO\nLes frais de participations sont fixés à cinq mille (5000) francs CFA."
   },
   {
     "objectID": "evenements/formation-latex.html#inscription",
     "href": "evenements/formation-latex.html#inscription",
-    "title": "Formation LATEX | Atelier pratique",
+    "title": "Formation \\(\\LaTeX\\) | Atelier pratique",
     "section": "Inscription",
     "text": "Inscription\nLe formulaire google d’inscription est disponible ici"
   },
   {
     "objectID": "evenements/formation-latex.html#formateur",
     "href": "evenements/formation-latex.html#formateur",
-    "title": "Formation LATEX | Atelier pratique",
+    "title": "Formation \\(\\LaTeX\\) | Atelier pratique",
     "section": "Formateur",
     "text": "Formateur\nLa formation sera assurée Adama OUEDRAOGO, PhD. Il est Enseignant-Chercheur, Expert en protection contre les Rayonnements non ionisants"
   },
@@ -88,14 +88,7 @@
     "href": "index.html",
     "title": "Accueil",
     "section": "",
-    "text": "Bienvenue sur le site web du Cercle Des Chercheurs, association à but non lucratif et à caractère scientifique."
-  },
-  {
-    "objectID": "index.html#nos-articles",
-    "href": "index.html#nos-articles",
-    "title": "Accueil",
-    "section": "Nos Articles",
-    "text": "Nos Articles"
+    "text": "Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Date - Le plus ancien\n        \n         \n          Date - Le plus récent\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nImplémenter Kmeans avec R\n\n\n\n\n\nLe partitionnement (clustering) est une méthode d’apprentissage non supervisée qui vise à rassembler les observations similaires d’un jeu de données en des sous-groupes bien distincts les uns des autres.\n\n\n\n\n\n\n17 sept. 2022\n\n\nOusmane Ouedraogo\n\n\n\n\n\n\nAucun article correspondant"
   },
   {
     "objectID": "contacts.html",
@@ -109,14 +102,7 @@
     "href": "inscription.html",
     "title": "Devenir membre du CDC",
     "section": "",
-    "text": "L’Association Cercle Des Chercheurs (C.D.C) crée le 13 Octobre 2021 et reconnu par l’Etat par récépissé N000001270401 du 02 Février 2022.\nAfin de permettre un meilleur renforcement du CDC, Le secrétariat exécutif national (SEN) lance une campagne d’adhésion des personnes physiques au CDC."
-  },
-  {
-    "objectID": "inscription.html#critères-dadhésion",
-    "href": "inscription.html#critères-dadhésion",
-    "title": "Devenir membre du CDC",
-    "section": "Critères d’adhésion",
-    "text": "Critères d’adhésion\nSelon l’article 3 portant sur l’admission, les critères d’adhésion des personnes physiques sont :\n\nEtre inscrit au moins au Master du système licence-Master-doctorat (LMD) ou aux DEA et DESS de l’ancien régime ;\nEtre titulaire d’un Master, d’un DEA, d’un DESS ou d’un Doctorat ;\nEtre un doctorant(e), un Chercheur, un Enseignant-Chercheur, un Chercheur associé et équivalent ;\nChaque membre doit faire preuve d’engagement, de solidarité et de respect envers les autres membres ;\nTous les membres obéissent aux principes d’égalité en droit et en devoir, et adhèrent au présent règlement intérieur\nEtc."
+    "text": "Selon l’article 3 portant sur l’admission, les critères d’adhésion des personnes physiques sont :\n\nEtre inscrit au moins au Master du système licence-Master-doctorat (LMD) ou aux DEA et DESS de l’ancien régime ;\nEtre titulaire d’un Master, d’un DEA, d’un DESS ou d’un Doctorat ;\nEtre un doctorant(e), un Chercheur, un Enseignant-Chercheur, un Chercheur associé et équivalent ;\nChaque membre doit faire preuve d’engagement, de solidarité et de respect envers les autres membres ;\nTous les membres obéissent aux principes d’égalité en droit et en devoir, et adhèrent au présent règlement intérieur\nEtc."
   },
   {
     "objectID": "inscription.html#modalités-dadhésion",
@@ -144,14 +130,7 @@
     "href": "evenements.html",
     "title": "A venir",
     "section": "",
-    "text": "Dans cette section, les évènements prévus du CDC : formations, conférences, colloques et autres assises."
-  },
-  {
-    "objectID": "evenements.html#les-évènements-à-venir",
-    "href": "evenements.html#les-évènements-à-venir",
-    "title": "A venir",
-    "section": "Les évènements à venir",
-    "text": "Les évènements à venir"
+    "text": "Trier par\n       Ordre par défaut\n         \n          Titre\n        \n         \n          Auteur·rice\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nFormation \\(\\LaTeX\\) | Atelier pratique\n\n\n\n\n\nFormation en atelier pratique sur la rédaction scientifique avec le logiciel \\(\\LaTeX\\). Elle couvrira les bases du code \\(\\LaTeX\\) pour éditer des documents de qualités excellentes tels que les rapports,mémoires, thèses ou livres.\n\n\n\n\n\n\nCercle Des Chercheurs\n\n\n\n\n\n\nAucun article correspondant"
   },
   {
     "objectID": "evenements.html#nos-calendriers",
@@ -159,12 +138,5 @@
     "title": "A venir",
     "section": "Nos calendriers",
     "text": "Nos calendriers"
-  },
-  {
-    "objectID": "evenements/formation-latex.html#introduction",
-    "href": "evenements/formation-latex.html#introduction",
-    "title": "Formation LATEX | Atelier pratique",
-    "section": "Introduction",
-    "text": "Introduction\nLATEX se caractérise par la qualité typographique et la portabilité des documents générés ainsi que par sa capacité à gérer des documents de grande taille et pour la préparation de présentations. Ceci en fait un outil très intéressant pour la rédaction d’un manuscrit de thèse. En revanche, sa prise en main demande un effort non-négligeable. C’est la raison de cette formation. LaTeX est particulièrement utilisé dans les domaines techniques et scientifiques pour la production de documents de taille moyenne (tels que des articles) ou importante (thèses ou livres, par exemple)"
   }
 ]

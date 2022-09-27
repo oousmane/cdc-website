@@ -1,6 +1,12 @@
 ---
-title: "Formation  LATEX | Atelier pratique"
-description: Formation en atelier pratique sur la rédaction scientifique avec le logiciel LATEX. Elle couvrira les bases du code latex pour éditer des documents de qualités excellentes tels que les rapports,mémoires, thèses ou livres.
+title: "Formation  {{< latex >}} | Atelier pratique"
+tags: 
+  - Formation
+  - Pratique
+  - LaTex
+  - Rédaction scientifiques
+description: Formation en atelier pratique sur la rédaction scientifique avec le logiciel {{< latex >}}. Elle couvrira les bases du code {{< latex >}} pour éditer des documents de qualités excellentes tels que les rapports,mémoires, thèses ou livres.
+title-block-banner: true
 author: "Cercle Des Chercheurs"
 image: "image/latex-poster.jpeg"
 editor: visual
@@ -10,15 +16,11 @@ editor: visual
 
 ## Introduction
 
-LATEX se caractérise par la qualité typographique et la portabilité des documents générés ainsi que par sa capacité à gérer des documents de grande taille et pour la préparation de présentations.
-Ceci en fait un outil très intéressant pour la rédaction d'un manuscrit de thèse.
-En revanche, sa prise en main demande un effort non-négligeable.
-C'est la raison de cette formation.
-LaTeX est particulièrement utilisé dans les domaines techniques et scientifiques pour la production de documents de taille moyenne (tels que des articles) ou importante (thèses ou livres, par exemple)
+{{< latex >}} se caractérise par la qualité typographique et la portabilité des documents générés ainsi que par sa capacité à gérer des documents de grande taille et pour la préparation de présentations. Ceci en fait un outil très intéressant pour la rédaction d’un manuscrit de thèse. En revanche, sa prise en main demande un effort non-négligeable. C’est la raison de cette formation. {{< latex >}} est particulièrement utilisé dans les domaines techniques et scientifiques pour la production de documents de taille moyenne (tels que des articles) ou importante (thèses ou livres, par exemple)
 
-## Pourquoi apprendre LaTex
+## Pourquoi apprendre {{< latex >}}
 
-Trois gros avantage de Latex
+Trois gros avantage de {{< latex >}}
 
 -   Séparation de la forme et du fond :Une fois le texte rédigé, la mise en forme est prise automatiquement en charge selon les instructions choisies et indiquées au moyen des commandes ou balises et si besoin vous pouvez aisément la modifier sans avoir à remanier le texte rédigé.
 
@@ -28,21 +30,21 @@ Trois gros avantage de Latex
 
 ## Objectifs pédagogiques
 
--   Se familiariser avec **LaTex**
+-   Se familiariser avec {{< latex >}}
 
--   Connaître toutes les structures à suivre et les bonnes pratiques pour réaliser la rédaction avec **LaTex**
+-   Connaître toutes les structures à suivre et les bonnes pratiques pour réaliser la rédaction avec {{< latex >}}
 
--   Pouvoir rédiger des articles ou des thèses scientifiques de qualité avec **LaTex**
+-   Pouvoir rédiger des articles ou des thèses scientifiques de qualité avec {{< latex >}}
 
 ## Prérequis
 
-*Il n'est pas demandé de connaître LaTex pour suivre cette formation.*
+*Il n'est pas demandé de connaître* {{< latex >}} *pour suivre cette formation.*
 
 -   Avoir les notions de base du traitement de texte
 
 ## Public cible
 
--   Des chercheurs et des étudiants qui souhaitent rédiger des mémoires, des articles ou des thèses avec **Latex**
+-   Des chercheurs et des étudiants qui souhaitent rédiger des mémoires, des articles ou des thèses avec {{< latex >}}
 
 -   Des auteurs des livres scientifiques qui veulent faire publier leurs œuvres par les grands éditeurs
 

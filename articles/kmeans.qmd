@@ -6,8 +6,11 @@ execute:
   warning: false
   message: false
 format: html
+title-block-banner: true
 image: "kmeans-preview.png"
+date: "2022-09-17"
 toc: true
+citation: true
 number-sections: true
 toc-title: "Contenu"
 toc-depth: 3

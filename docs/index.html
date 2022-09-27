@@ -2,10 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.179">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Bienvenue sur le site web du Cercle Des Chercheurs, association à but non lucratif et à caractère scientifique.">
 
 <title>CDC - Accueil</title>
 <style>
@@ -72,9 +73,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -143,19 +144,13 @@ cookieconsent.run({
  <span class="dropdown-text">Présentation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./about.html">
- <span class="dropdown-text">Partenaires</span></a>
+    <a class="dropdown-item" href="./inscription.html">
+ <span class="dropdown-text">Adhésion</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./inscription.html">Adhésion</a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./evenements.html">Évènements à venir</a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html">Publications</a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -176,7 +171,27 @@ cookieconsent.run({
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Accueil</h1>
+                  <div>
+        <div class="description">
+          Bienvenue sur le site web du Cercle Des Chercheurs, association à but non lucratif et à caractère scientifique.
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -189,25 +204,11 @@ cookieconsent.run({
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Accueil</h1>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
 
-    
-    
-  </div>
-  
-
-</header>
-
-<p>Bienvenue sur le site web du Cercle Des Chercheurs, association à but non lucratif et à caractère scientifique.</p>
 <section id="nos-articles" class="level2">
 <h2 class="anchored" data-anchor-id="nos-articles">Nos Articles</h2>
 
@@ -216,8 +217,33 @@ cookieconsent.run({
 </section>
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Trier par" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Trier par</option>
+       <option value="index" data-direction="asc">Ordre par défaut</option>
+         <option value="listing-title" data-direction="asc">
+          Titre
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Le plus ancien
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Le plus récent
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Auteur·rice
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1664030556522" data-listing-reading-time-sort="6.58">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1663369200000" data-listing-file-modified-sort="1664280592721" data-listing-reading-time-sort="6.58">
 <div class="thumbnail">
 <p><a href="./articles/kmeans.html"> <img src="./articles/kmeans-preview.png" class="thumnail-image"> </a></p>
 </div>
@@ -236,6 +262,9 @@ Implémenter Kmeans avec R
 </div>
 <div class="metadata">
 <a href="./articles/kmeans.html">
+<div class="listing-date">
+17 sept. 2022
+</div>
 <div class="listing-author">
 Ousmane Ouedraogo
 </div>
